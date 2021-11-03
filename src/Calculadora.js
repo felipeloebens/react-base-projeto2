@@ -65,10 +65,10 @@ function Calculadora() {
         <Col xs="9">
           <Form.Control type="text"
             name="txtNumeros"
-            className="text-center"
+            className="m-auto"
             readOnly="readonly"
-            value={txtNumeros}/>
-        
+            value={txtNumeros}
+            data-testid="txtNumeros" />
         </Col>
       </Row>
 
@@ -87,7 +87,7 @@ function Calculadora() {
         </Col>
         <Col>
           <Button variant="warning"
-          onClick={() => definirOperacao('/')}>/</Button>
+          onClick={() => definirOperacao(DIVISAO)}>/</Button>
         </Col>
       </Row>
 
@@ -106,7 +106,7 @@ function Calculadora() {
         </Col>
         <Col>
           <Button variant="warning"
-          onClick={() => definirOperacao('*')}>*</Button>
+          onClick={() => definirOperacao(MULTIPLICACAO)}>*</Button>
         </Col>
       </Row>
 
@@ -125,7 +125,7 @@ function Calculadora() {
         </Col>
         <Col>
           <Button variant="warning"
-          onClick={() => definirOperacao('-')}>-</Button>
+          onClick={() => definirOperacao(SUBTRACAO)}>-</Button>
         </Col>
       </Row>
 
@@ -144,7 +144,7 @@ function Calculadora() {
         </Col>
         <Col>
           <Button variant="warning"
-          onClick={() => definirOperacao('+')}>+</Button>
+          onClick={() => definirOperacao(SOMA)}>+</Button>
         </Col>
       </Row>
     </Container>
